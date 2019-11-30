@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/Continhas",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
