@@ -1,0 +1,31 @@
+<div fxFlex="100" fxLayoutAlign="center">
+  <div
+    class="go-shopping-list-container"
+    fxLayout="column"
+    fxFlex="500px"
+    fxFlex.lt-md="100"
+  >
+    <mat-list fxFlex="100">
+      <h3 mat-subheader>
+        Encomendas para hoje
+      </h3>
+      <mat-list-item *ngFor="let product of products">
+        <mat-icon mat-list-icon> fastfood</mat-icon>
+        <h4 mat-line>{{ product.name }}</h4>
+        <p mat-line>{{ product.orderGiver }}</p>
+        <mat-form-field fxFlex="5rem" class="price-input">
+          <input
+            matInput
+            placeholder="Preço"
+            value="{{ product.cost }}"
+            
+          />
+        </mat-form-field>
+        <mat-checkbox [(ngModel)]="product.inCart"></mat-checkbox>
+      </mat-list-item>
+    </mat-list>
+    <div fxFlexAlign="end">
+      <button mat-raised-button color="primary">Completar</button>
+    </div>
+  </div>
+</div>

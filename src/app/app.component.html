@@ -1,7 +1,7 @@
 <div class="mat-drawer-container app-container">
-  <mat-toolbar color="primary">
+  <mat-toolbar color="primary" *ngIf="nav.visible">
     <mat-toolbar-row>
-      <button mat-icon-button routerLink="/">
+      <button mat-icon-button routerLink="/" *ngIf="nav.backVisible">
         <mat-icon>arrow_back</mat-icon>
       </button>
       <span>{{ title }}</span>

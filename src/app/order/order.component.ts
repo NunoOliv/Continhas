@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormControl } from "@angular/forms";
 import { Observable } from "rxjs";
 import { map, startWith } from "rxjs/operators";
+import {NavbarService} from '../services/navbar/navbar.service'
 
 export interface Product {
   name: string;
@@ -32,9 +33,16 @@ export class OrderComponent implements OnInit {
       cost: 1.99
     }
   ];
-  constructor() {}
+  
+  constructor( public nav: NavbarService ) {}
 
   ngOnInit() {
+    setTimeout(() => {
+      //SetUp Navigation Bar
+      this.nav.show();
+      this.nav.showBack();
+    }, 0);
+
     this.productfilteredOptions = this.productPicker.valueChanges.pipe(
       startWith(""),
       map(value => this._filter(value))

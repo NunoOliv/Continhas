@@ -9,12 +9,14 @@ import { MaterialModule } from './material.module';
 import { OverviewComponent } from './overview/overview.component';
 import { OrderComponent } from './order/order.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { GoShoppingComponent } from './go-shopping/go-shopping.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OverviewComponent,
-    OrderComponent
+    OrderComponent,
+    GoShoppingComponent
   ],
   imports: [
     BrowserModule,
