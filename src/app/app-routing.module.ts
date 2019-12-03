@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { OverviewComponent } from './overview/overview.component';
 import { OrderComponent } from './order/order.component';
-import { GoShoppingComponent } from './go-shopping/go-shopping.component'
+import { GoShoppingComponent } from './go-shopping/go-shopping.component';
+import { AddExpenseComponent } from './add-expense/add-expense.component'; 
 
 
 const routes: Routes = [
@@ -18,6 +19,9 @@ const routes: Routes = [
   },
   {
     path: "shoppingList", component: GoShoppingComponent
+  },
+  {
+    path: "addExpense", component: AddExpenseComponent
   }
 ];
 

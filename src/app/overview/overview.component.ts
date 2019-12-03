@@ -35,7 +35,7 @@ export class OverviewComponent implements OnInit {
       description: "Adiciona uma despesa à tua conta",
       cols: 1,
       rows: 1,
-      ref: "/"
+      ref: "/addExpense"
     },
     {
       text: "As minhas contas",

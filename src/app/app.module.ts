@@ -10,13 +10,15 @@ import { OverviewComponent } from './overview/overview.component';
 import { OrderComponent } from './order/order.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { GoShoppingComponent } from './go-shopping/go-shopping.component';
+import { AddExpenseComponent } from './add-expense/add-expense.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OverviewComponent,
     OrderComponent,
-    GoShoppingComponent
+    GoShoppingComponent,
+    AddExpenseComponent
   ],
   imports: [
     BrowserModule,
