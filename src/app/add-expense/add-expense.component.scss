@@ -1,9 +1,13 @@
 $normal-padding: 16px;
 
 .addExpenseForm {
-    padding: $normal-padding;
+  padding: $normal-padding;
 }
 
 .selectable-table-row {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.order_input {
+  width: 100%;
 }
