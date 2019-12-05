@@ -11,6 +11,7 @@ import { OrderComponent } from './order/order.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { GoShoppingComponent } from './go-shopping/go-shopping.component';
 import { AddExpenseComponent } from './add-expense/add-expense.component';
+import { StatusAndMovementsComponent } from './status-and-movements/status-and-movements.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AddExpenseComponent } from './add-expense/add-expense.component';
     OverviewComponent,
     OrderComponent,
     GoShoppingComponent,
-    AddExpenseComponent
+    AddExpenseComponent,
+    StatusAndMovementsComponent
   ],
   imports: [
     BrowserModule,

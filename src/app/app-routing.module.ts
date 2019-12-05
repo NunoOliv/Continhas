@@ -4,6 +4,7 @@ import { OverviewComponent } from './overview/overview.component';
 import { OrderComponent } from './order/order.component';
 import { GoShoppingComponent } from './go-shopping/go-shopping.component';
 import { AddExpenseComponent } from './add-expense/add-expense.component'; 
+import { StatusAndMovementsComponent } from './status-and-movements/status-and-movements.component'; 
 
 
 const routes: Routes = [
@@ -22,6 +23,9 @@ const routes: Routes = [
   },
   {
     path: "addExpense", component: AddExpenseComponent
+  },
+  {
+    path: "status", component: StatusAndMovementsComponent
   }
 ];
 

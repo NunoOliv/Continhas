@@ -42,7 +42,7 @@ export class OverviewComponent implements OnInit {
       description: "Vê o teu saldo",
       cols: 1,
       rows: 1,
-      ref: "/"
+      ref: "/status"
     }
   ];
   constructor(public nav: NavbarService) {}
