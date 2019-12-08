@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import {NavbarService} from './services/navbar/navbar.service'
 
 @Component({
@@ -8,5 +9,7 @@ import {NavbarService} from './services/navbar/navbar.service'
 })
 export class AppComponent {
   title = 'Continhas';
-  constructor( public nav: NavbarService ) {}
+  constructor( public nav: NavbarService, db: AngularFirestore ) {
+    
+  }
 }
