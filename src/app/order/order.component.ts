@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormControl } from "@angular/forms";
 import { Observable } from "rxjs";
 import { map, startWith } from "rxjs/operators";
-import {NavbarService} from '../services/navbar/navbar.service'
+import {NavbarService} from '../shared/services/navbar/navbar.service'
 
 export interface Product {
   name: string;

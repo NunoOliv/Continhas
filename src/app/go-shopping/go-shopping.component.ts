@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { NavbarService } from "../services/navbar/navbar.service";
+import { NavbarService } from "../shared/services/navbar/navbar.service";
 
 export interface OrderItem {
   name: string;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { NavbarService } from "../services/navbar/navbar.service";
+import { NavbarService } from "../shared/services/navbar/navbar.service";
+import { UserService } from "../shared/services/user/user.service";
 
 export interface Tile {
   cols: number;
@@ -15,6 +16,7 @@ export interface Tile {
   styleUrls: ["./overview.component.scss"]
 })
 export class OverviewComponent implements OnInit {
+  user;
   tiles: Tile[] = [
     {
       text: "Encomendar",
@@ -45,7 +47,7 @@ export class OverviewComponent implements OnInit {
       ref: "/status"
     }
   ];
-  constructor(public nav: NavbarService) {}
+  constructor(public nav: NavbarService, public userService: UserService) {}
 
   ngOnInit() {
     setTimeout(() => {
@@ -53,5 +55,11 @@ export class OverviewComponent implements OnInit {
       this.nav.show();
       this.nav.hideBack();
     }, 0);
+    this.getUser()
+  }
+
+  getUser(): void {
+    this.userService.getUser()
+        .subscribe(user => this.user = user);
   }
 }

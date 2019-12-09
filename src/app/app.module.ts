@@ -4,10 +4,12 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
+// Import Firebase Modules
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
+import { AuthService } from "./shared/services/auth/auth.service";
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -17,6 +19,8 @@ import { OrderComponent } from "./order/order.component";
 import { GoShoppingComponent } from "./go-shopping/go-shopping.component";
 import { AddExpenseComponent } from "./add-expense/add-expense.component";
 import { StatusAndMovementsComponent } from "./status-and-movements/status-and-movements.component";
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,9 @@ import { StatusAndMovementsComponent } from "./status-and-movements/status-and-m
     OrderComponent,
     GoShoppingComponent,
     AddExpenseComponent,
-    StatusAndMovementsComponent
+    StatusAndMovementsComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +45,7 @@ import { StatusAndMovementsComponent } from "./status-and-movements/status-and-m
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
